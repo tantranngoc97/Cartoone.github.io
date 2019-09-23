@@ -1,0 +1,660 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+@font-face{
+	font-family: 'bold';
+
+	src: url("../font/BigJohnPRO-Bold.woff");
+}
+@font-face
+{
+	font-family: 'regular';
+	src:url("../font/BigJohnPRO-Regular.woff");
+
+}
+@font-face
+{
+	font-family: 'light';
+	src:url("../font/BigJohnPRO-Light.woff");
+
+}
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1 ; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(252,202,82,0.98); /* Black fallback color */
+
+
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+ color: #FFFFFF ;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+	z-index: 71 ;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+ text-decoration: none;
+  right: 45px;
+  font-size: 60px;
+  color: #FFFFFF;
+  transition: all 0.5s;
+
+}
+
+
+.closebtn a:hover
+{
+	color: #feca52;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+a
+{
+	font-family: 'bold';
+	font-size: 20pt;
+	text-decoration: none ;
+	color: #FFFFFF ;
+}
+
+#header, #footer{
+		position:fixed;
+		height: 50px;
+		display:block;
+		width: 100%;
+
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 20px 0 0 0;
+	}
+
+	#header{
+		top:0px;
+	}
+	#footer{
+		bottom:0px;
+	}
+
+
+
+
+
+
+.text
+{
+	align-content: center;
+	color: #000000;
+	top: 50px;
+
+}
+
+
+.text h1
+{
+	font-family: 'bold';
+	padding:-10px;
+	font-size:62pt;
+
+}
+
+.text h3
+{
+	font-family: 'regular';
+	pading:5px;
+	font-size: 35pt;
+
+}
+
+.text p
+{
+	font-family: 'light' ;
+	font-size:20pt;
+
+}
+
+.text h2
+{
+	font-family: 'bold';
+	font-size:28pt;
+	color: #000000;
+	text-align:center;
+}
+
+.text h5
+{
+	font-family: 'bold';
+	font-size:32pt;
+	color: #000000;
+}
+
+.text a
+{
+	text-decoration: none ;
+	color: #000000;
+	transition: all 0.5s;
+
+
+}
+.text a:hover
+{
+	color: #FFFFFF;
+	text-decoration: none ;
+}
+
+.text a i {
+	padding-left: 5px;
+}
+.overlayworks
+{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:  #FECA52;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.iconi
+{
+	position: fixed;
+	left: 450px;
+}
+
+.iconi a
+{
+	float : left; padding-left: 15px;
+
+}
+.iconi a:hover
+{
+	color: #FFFFFF ;
+}
+.iconi a i:hover
+{
+	color: #FFFFFF ;
+}
+
+.overlaytext
+{
+  color: #000000;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'regular';
+}
+
+.overlaytext a:hover
+{
+	color: #000000 ;
+}
+
+.itemtext:hover .overlayworks {
+  height: 30%;
+}
+.itemtext
+{
+	transition: all 0.5s;
+	text-decoration: none;
+	padding-bottom: 15px;
+	position: relative ;
+	font-family: 'bold';
+	z-index: 10000;
+	height: 160px;
+	margin-bottom: 150px;
+	padding-top: 40px;
+
+
+
+}
+
+.itemtext a
+{
+	color:#000000;
+	text-decoration: none;
+}
+.itemtext a:hover
+{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.itemtext:hover
+{
+	-webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+	    color: #000000;
+}
+.itemtext h4
+
+{
+ font-size: 22pt;
+}
+
+.contact-section h1{
+  text-align: center;
+  color: #ddd;
+}
+
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text{
+  display: block;
+  font-family: 'regular' ;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border-style: solid;
+  border-width: 2px;
+
+  background: #FFFFFF;
+  padding: 20px 40px;
+  outline: none;
+  color:#000000;
+  transition: 0.5s;
+  font-size: 20pt;
+
+}
+.contact-form-text:focus{
+  border-color: #feca52;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+}
+.contact-form-btn{
+  font-family: 'bold';
+  border: 0;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 12px 50px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+	border-radius: 0;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+}
+.contact-form-btn:hover{
+  background: #feca52;
+}
+
+
+
+#fullpage
+{
+	align-content: center;
+	width: auto;
+	height: 500px;
+    margin-top: 50px;
+
+
+}
+
+.ourteam
+{
+	margin-bottom: 300px;
+	align-content: center;
+	transition:  all 0.9 ease ;
+	min-height: 200px;
+	min-width: 200px;
+
+
+}
+
+.ourteam:hover
+{
+	padding-top:40px;
+	border-color: #feca52;
+
+
+
+}
+
+.ourteam h3
+{
+	font-family: 'bold' ;
+}
+
+.ourteam a
+
+{
+
+
+	text-decoration: none;
+	color: #000000;
+
+
+}
+.ourteam a:hover
+{
+	text-decoration: none;
+	color: #000000;
+}
+
+
+
+
+.desbtn
+{
+  font-family: 'bold';
+  border: 0;
+  background:#242424;
+  color: #FECA52;
+ font-size: 36pt;
+  align-content: center;
+  width: 300px;
+   height: 70px;
+  cursor: pointer;
+  transition: 0.5s;
+	position: relative;
+	bottom: 100px;
+	left: 700px;
+}
+
+.desbtn:hover
+{
+	background: #feca52 ;
+	color: #FFFFFF;
+
+
+}
+
+.desbtn a
+{
+	color: #feca52;
+	text-decoration: none ;
+	font-size: 36pt;
+}
+
+.desbtn a:hover
+{
+	text-decoration: none ;
+	color: #FFFFFF;
+}
+
+.notfound
+{
+	width: 1366px;
+	height: 768px;
+
+	background-image: url("file:///C:/Users/Arena_Aptech/Desktop/cartoone%20html/img/4041.jpg");
+   background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+
+.icondes
+{
+	width: 180px;
+   margin-top: 20px;
+	margin-left: 15px;
+	transition: all 0.3s ease;
+
+}
+.icondes a
+{
+
+	padding-right: 30px;
+	text-decoration: none ;
+	color: #000000 ;
+	transition: all 0.3s ease;
+}
+
+.icondes a:hover
+{
+
+    padding-top: 10px;
+	color: #FECA52;
+}
+
+
+	.sorry
+{
+
+	width: auto;
+	height: 800px;
+
+}
+
+.sorry  hr
+{
+border: 1px solid #feca52;
+}
+.notfoundbtn
+{
+	 cursor: pointer;
+  transition: 0.5s;
+	position: relative;
+	font-family: 'bold';
+  border: 0;
+  background: #feca52;
+  color: #000000;
+ font-size: 36pt;
+ align-content: center;
+  width: 170px;
+ height: 50px;
+	text-align: center;
+
+}
+
+.notfoundbtn a
+{
+	text-decoration: none;
+	color: #000000 ;
+}
+
+.notfoundbtn a:hover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.notfoundbtn:hover
+{
+	background: #000000; ;
+	color: #FFFFFF;
+
+}
+
+.notfoundbtn h1
+{
+	padding-top:12px;
+}
+
+
+.textsection
+{ position: absolute;
+  top:230px;
+  left: 20px;
+  transition: 0.5s;
+  color: #000000;
+
+}
+
+.textsection h3
+{
+	font-family: bold ;
+	font-size: 56pt;
+	color: #000000;
+	text-decoration: none;
+
+}
+
+
+.textsection a
+{
+	text-decoration: none ;
+	font-size:36pt;
+	color: #000000;
+}
+
+.textsection a:hover
+{
+	color: #feca52;
+	text-decoration: none;
+}
+
+.contactbg
+{
+	width: 1366px;
+	height: 768px;
+
+	background-image: url("file:///C:/Users/Arena_Aptech/Desktop/cartoone%20html/img/chobenthanh.gif");
+   background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.getback
+{
+  cursor: pointer;
+  transition: 0.5s;
+	position: absolute;
+	font-family: 'bold';
+  border: 0;
+  background: #feca52;
+  color: #000000;
+ font-size: 36pt;
+ align-content: center;
+  width: 280px;
+ height:  50px;
+	text-align: center;
+left: 810px;
+
+
+}
+
+
+
+.getback a
+{
+	text-decoration: none;
+	color: #000000 ;
+}
+
+.getback a:hover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.getback:hover
+{
+	background: #000000; ;
+	color: #FFFFFF;
+
+}
+
+.getback h1
+{
+	padding-top:12px;
+}
+
+.containerr {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  align-content: center ;
+}
+
+.overlayyy {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #feca52;
+}
+
+.containerr:hover .overlayyy {
+  opacity: 1;
+}
+
+.textt {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'bold';
+}
+
+.textt h5
+{
+	font-family: bold ;
+	color: #000000 ;
+	font-size: 25px ;
+}

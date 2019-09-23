@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+#menu{
+
+	position: fixed;
+	top:0;
+
+	z-index:1;
+
+	width: 100%;
+	filter: alpha(opacity=00);
+}
+
+.menubtn
+{
+
+	float: right ;
+	margin-right: 20px;
+	margin-top: 20px;
+
+}
+
+.logone
+{   width: auto;
+	margin-top:20px;
+	margin-left:20px;
+	height: 150px;
+	transition: 0.5s;
+
+}
+
+.icon
+{
+	width: 180px;
+   margin-top: 800px;
+	margin-left: 10px;
+	transition: all 0.3s ease;
+
+}
+.icon a
+{
+
+	padding-right: 30px;
+	text-decoration: none ;
+	color: #000000 ;
+	transition: all 0.3s ease;
+	margin-right: 120px;
+}
+
+.icon a :hover
+{
+
+    padding-top: 10px;
+	   color: #FECA52;
+}
